@@ -1,0 +1,35 @@
+def main():
+    print("Helow World")
+##Ejecutaremos un proyecto en pyhton, donde desarrollaremos las estructuras de control con algunos ejemplos
+##Comenzamos con las estructuras
+##if
+##En este ejercicio valoraremos condiciones mediante if, elif, else (serían lo equivalente a switch o case )
+##Valoraremos si es numro par o impar, además, arrojaremos un dato de promedio
+##De
+##Solicitamos los datos
+limit = 5
+contador = 1 #Contador para cerrar el ciclo
+sumatoria = 0
+cantidad = 5 ##cantidades de numeros que capturarás
+print("Vamos a capturar 5 numeros") ##impresión para la captura 
+numeros = [] ##Asi se definen arreglos en pyhton. 
+while contador <= limit:
+    for i in range(cantidad):
+        numero = input("Ingresa tu número ")
+        #Convertiremos a entero, ya que nos regresa una cadena
+        numero = int(numero)
+        sumatoria = sumatoria + numero
+        #Se agrega al arreglo con la función append
+        #numeros.append(numero)
+        if(numero % 2 == 0):
+            
+            print(numero ,"Es un numero par")
+        elif(numero % 2 != 0):
+            
+            print(numero, "no es numero par")
+        else:#Nunca entraremos a esta condición, ya que solo estamos valorando dos condiciones
+            print("exito amigo")
+        contador = contador + 1 #contador que nos permita ciclar el while, cuando se cumpla saldremos
+
+promedio = sumatoria / cantidad #Promediaremos e imprimiremos el promedio. 
+print(promedio , "fue el promedio que se generó ")
